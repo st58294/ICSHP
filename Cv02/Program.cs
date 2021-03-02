@@ -18,7 +18,7 @@ namespace Cv02{
             "6. Hledání prvního výskytu zadaného čísla\n"       +
             "7. Hledání posledního výskytu zadaného čísla\n"    + 
             "8. konec programu\n");
-            int choice = Fei.BaseLib.Reading.GetInt("Zadej číslo pro volbu v menu:");
+            int choice = Fei.BaseLib.Reading.GetInt("Zadej číslo pro volbu v menu");
 
                 if (choice >= 1 && choice <= 7){
                     switch (choice)
@@ -87,6 +87,7 @@ namespace Cv02{
         }
 
         private static void SortArrayDescending(int[] array){
+            Array.Sort(array);
             Array.Reverse(array);
         }
 
@@ -98,7 +99,7 @@ namespace Cv02{
 
         private static void InsertElement(int[] array){
             for (int i = 0; i < array.Length; i++){
-                array[i] = Fei.BaseLib.Reading.GetInt("Zadej prvek který chceš přidat: ");
+                array[i] = Fei.BaseLib.Reading.GetInt("Zadej prvek který chceš přidat");
             }
         }
     }
